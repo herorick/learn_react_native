@@ -4,22 +4,26 @@ import { StyleSheet } from 'react-native';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import CategoryListItem from '../components/CategoryListItem';
+import { ScrollView } from 'react-native-gesture-handler';
+import styles from './style';
 
 export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
+    <View>
       <Text style={styles.title}>Tab One</Text>
-      <CategoryListItem />
-      <CategoryListItem />
-      <CategoryListItem />
-      <CategoryListItem />
-      <CategoryListItem />
-      <CategoryListItem />
-      <CategoryListItem />
-      <CategoryListItem />
-      <CategoryListItem />
-      <CategoryListItem />
-      <CategoryListItem />
+        <ScrollView>
+          <CategoryListItem />
+          <CategoryListItem />
+          <CategoryListItem />
+          <CategoryListItem />
+          <CategoryListItem />
+          <CategoryListItem />
+          <CategoryListItem />
+          <CategoryListItem />
+          <CategoryListItem />
+          <CategoryListItem />
+          <CategoryListItem />
+        </ScrollView>
 
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />
@@ -27,19 +31,3 @@ export default function TabOneScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
