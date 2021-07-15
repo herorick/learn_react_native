@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -33,7 +34,7 @@ export default function TabOneScreen() {
       name: 'nguyen thi tu binh'
     }
   ]
-  const [listCategory] = useState(data);
+  const [listCategory, setListCategory] = useState(data);
 
   return (
     <View>

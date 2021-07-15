@@ -2,3 +2,5 @@
   dùng để debug views trong reactNative
 
 #flatlist dùng để show list
+
+#TouchableOpacity => có hàm OnPress, opacity="" để click vào sẽ làm mờ đi
